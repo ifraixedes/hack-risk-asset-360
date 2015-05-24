@@ -5,14 +5,11 @@ var controllersModule = require('./_index');
 /**
  * @ngInject
  */
-function ExampleCtrl() {
+function ExampleCtrl($scope) {
 
-  // ViewModel
-  var vm = this;
-
-  vm.title = 'AngularJS, Gulp, and Browserify!';
-  vm.number = 1234;
+  $scope.title = 'AngularJS, Gulp, and Browserify!';
+  $scope.number = 1234;
 
 }
 
-controllersModule.controller('ExampleCtrl', ExampleCtrl);
+controllersModule.controller('ExampleCtrl', ['$scope', ExampleCtrl]);
