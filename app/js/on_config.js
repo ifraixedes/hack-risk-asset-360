@@ -13,6 +13,11 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
     controller: 'ExampleCtrl as home',
     templateUrl: 'home.html',
     title: 'Home'
+  })
+  .state('Deal', {
+    url: '/deal',
+    controller: 'DealCtrl as deal',
+    templateUrl: 'deal.html'
   });
 
   $urlRouterProvider.otherwise('/');
